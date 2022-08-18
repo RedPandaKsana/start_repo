@@ -59,3 +59,8 @@ def test_triangle_add_area_square(default_triangle, default_square):
 
 def test_triangle_add_area_triangle(default_triangle):
     assert default_triangle.add_area(default_triangle) == default_triangle.area + default_triangle.area
+
+def test_triangle_add_area_wrong(default_triangle):
+    a = 1
+    with pytest.raises(ValueError):
+        default_triangle.add_area(a)

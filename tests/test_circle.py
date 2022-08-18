@@ -31,3 +31,8 @@ def test_circle_add_area_rectangle(default_circle, default_rectangle):
 
 def test_circle_add_area_circle(default_circle):
     assert default_circle.add_area(default_circle) == default_circle.area+default_circle.area
+
+def test_circle_add_area_wrong(default_circle):
+    a = 1
+    with pytest.raises(ValueError):
+        default_circle.add_area(a)
